@@ -1,13 +1,25 @@
-# Astro with Tailwind
+# Light Auth
 
-```sh
-npm create astro@latest -- --template with-tailwindcss
-```
+<p align="center">
+    <img src="https://raw.githubusercontent.com/lightauth/.github/refs/heads/main/images/light-auth.svg" alt="Light Auth Logo" width="120"/>
+</p>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/with-tailwindcss/devcontainer.json)
+![LightAuth](https://raw.githubusercontent.com/lightauth/.github/refs/heads/main/images/light-auth.svg) [Light Auth](https://lightauth.github.io) is a lightweight authentication solution designed for simplicity and ease of integration.
 
-Astro comes with [Tailwind](https://tailwindcss.com) support out of the box. This example showcases how to style your Astro project with Tailwind.
+It provides essential authentication features with minimal configuration, making it ideal for small projects, prototypes, or applications that require straightforward user sign-in functionality.
 
-For complete setup instructions, please see our [Tailwind Integration Guide](https://docs.astro.build/en/guides/integrations-guide/tailwind).
+## Astro Sample
+
+This sample demonstrates how to integrate Light Auth with an Astro project.
+
+You'll find examples of secure route protection, user session management, and simple login flows—all implemented using Astro's file-based routing and component system.
+
+Explore the code to see how authentication logic is handled in Astro endpoints and how user state is managed across pages.
+
+## Contributing
+
+Contributions are welcome! Please open issues or submit pull requests to help improve Light Auth.
+
+## License
+
+This project is licensed under the MIT License.
