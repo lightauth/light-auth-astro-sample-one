@@ -1,0 +1,18 @@
+---
+import { Button } from "../ui/button";
+import GoogleSvg from "../../../public/google.svg";
+
+const { providerName, callbackUrl } = Astro.props;
+---
+
+<Button type="button" id="btnLogin" variant="outline" className="w-full" data-provider={providerName} data-callback-url={callbackUrl}>
+  <GoogleSvg width={18} height={18} />
+  <slot />
+</Button>
+
+<script>
+  import { signIn } from "@/lib/auth-client";
+  const btnLogin = document.getElementById("btnLogin");
+
+  if (btnLogin) btnLogin.onclick = () => signIn(btnLogin.dataset.provider, btnLogin.dataset.callbackUrl);
+</script>

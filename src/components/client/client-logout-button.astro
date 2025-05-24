@@ -1,0 +1,17 @@
+---
+import { Button } from "../ui/button";
+import GoogleSvg from "../../../public/google.svg";
+
+const { revokeToken, callbackUrl } = Astro.props;
+---
+
+<Button type="button" id="btnLogout" variant="outline" className="w-full" data-revoke-token={revokeToken} data-callback-url={callbackUrl}>
+  <GoogleSvg width={18} height={18} />
+  <slot />
+</Button>
+
+<script>
+  import { signOut } from "@/lib/auth-client";
+  const btnLogout = document.getElementById("btnLogout");
+  if (btnLogout) btnLogout.onclick = () => signOut(btnLogout.dataset.revokeToken?.toLocaleLowerCase() == "true", btnLogout.dataset.callbackUrl);
+</script>

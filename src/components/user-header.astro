@@ -1,0 +1,29 @@
+---
+import { getSession, getUser } from "@/lib/auth";
+
+const session = await getSession(Astro);
+const user = await getUser(Astro, session?.userId.toString()); // Fetch user details based on session
+---
+
+{
+  session == null ? (
+    <div class="flex items-center gap-2">
+      <a href="/" class="text-sm text-blue-600 hover:text-blue-800">
+        Home
+      </a>
+      <a href="/login" class="text-sm text-blue-600 hover:text-blue-800">
+        Login
+      </a>
+    </div>
+  ) : (
+    <div class="flex items-center gap-2 ">
+      <span class="hidden text-sm sm:inline-flex">{session.email}</span>
+      <div class="relative flex size-8 shrink-0 overflow-hidden rounded-full">
+        <img src={user?.picture ?? `https://api.dicebear.com/9.x/thumbs/svg?seed=${Math.floor(Math.random() * 100000) + 1}&randomizeIds=true`} alt={session?.name} />
+      </div>
+      <a href="/logout" class="text-sm text-blue-600 hover:text-blue-800">
+        Logout
+      </a>
+    </div>
+  )
+}
