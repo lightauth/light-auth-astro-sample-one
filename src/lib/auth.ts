@@ -8,4 +8,4 @@ const googleProvider: LightAuthProvider = {
   searchParams: new Map([["access_type", "offline"]]),
 };
 
-export const { providers, handlers, getSession, getUser, signIn, signOut } = CreateLightAuth({ providers: [googleProvider] });
+export const { providers, handlers, getAuthSession, getUser, signIn, signOut } = CreateLightAuth({ providers: [googleProvider] });

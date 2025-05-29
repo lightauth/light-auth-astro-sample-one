@@ -1,7 +1,7 @@
 ---
-import { getSession, getUser } from "@/lib/auth";
+import { getAuthSession, getUser } from "@/lib/auth";
 
-const session = await getSession(Astro);
+const session = await getAuthSession(Astro);
 const user = await getUser(Astro, session?.userId.toString()); // Fetch user details based on session
 ---
 

@@ -2,7 +2,7 @@
 import "../styles/global.css";
 // Component Imports
 import Layout from "@/layouts/main.astro";
-import { getSession, getUser, signIn } from "@/lib/auth";
+import { signIn } from "@/lib/auth";
 import { actions } from "astro:actions";
 import GoogleSvg from "../../public/google.svg";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -40,7 +40,7 @@ if (result && !result.error) {
                 </Button>
               </form>
 
-              <ClientLoginButton providerName="google" callbackUrl="/"> Login using signIn client function </ClientLoginButton>
+              <ClientLoginButton providerName="google" callbackUrl="/">Login using signIn client function </ClientLoginButton>
             </div>
           </div>
         </CardContent>
