@@ -135,8 +135,6 @@ if (result && !result.error && result.data) {
 
 ### 6) Use Light Auth in profile page
 
-Server side:
-
 ``` astro
 ---
 // Component Imports
